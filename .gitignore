@@ -1,0 +1,21 @@
+# Ignore Maven target directory
+target/
+
+# Ignore Versions Maven Plugin files
+pom.xml.versionsBackup
+
+# Ignore Maven Release Plugin files
+pom.xml.next
+pom.xml.releaseBackup
+pom.xml.tag
+release.properties
+
+# Ignore eclipse project files
+.classpath
+.project
+.settings/
+
+# Ignore IntelliJ project files
+.idea/
+*.iml
+*.iws
