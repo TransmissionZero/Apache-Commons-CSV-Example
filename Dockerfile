@@ -9,10 +9,10 @@ RUN dnf -y update && \
         dos2unix \
         git \
         gnupg \
-        java-11-openjdk-devel \
-        java-11-openjdk-src \
+        java-17-openjdk-devel \
+        java-17-openjdk-src \
         maven \
-        maven-openjdk11 \
+        maven-openjdk17 \
         openssh-clients \
         patch \
         procps-ng \
