@@ -22,7 +22,11 @@ import org.apache.commons.csv.CSVRecord;
 public class CommonsCsvExample
 {
   /** CSV format for reading and writing CSV. Uses RFC4180 format with a header record. */
-  private static final CSVFormat CSV_FORMAT = CSVFormat.RFC4180.withFirstRecordAsHeader().withSkipHeaderRecord(false);
+  private static final CSVFormat CSV_FORMAT = CSVFormat.Builder.create(CSVFormat.RFC4180)
+    .setHeader()
+    .setSkipHeaderRecord(true)
+    .setAllowDuplicateHeaderNames(false)
+    .build();
 
   /**
    * Perform a string find and replace operation in a given column of a CSV file.
@@ -120,7 +124,9 @@ public class CommonsCsvExample
       final String oldValue, final String newValue) throws IOException
   {
     // CSV format for writing CSV. Uses the same format and header names as the input CSV.
-    final CSVFormat outputCsvFormat = CSV_FORMAT.withHeader(parser.getHeaderNames().toArray(new String[0]));
+    final CSVFormat outputCsvFormat = CSVFormat.Builder.create(CSVFormat.RFC4180)
+      .setHeader(parser.getHeaderNames().toArray(new String[0]))
+      .build();
 
     // Open output CSV file for writing and create a CSV printer
     try (Writer outputFileWriter = Files.newBufferedWriter(outputFile, StandardCharsets.UTF_8,
