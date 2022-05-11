@@ -1,0 +1,15 @@
+{
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-1.8",
+            "path": "/usr/lib/jvm/java-openjdk"
+        },
+        {
+            "name": "JavaSE-11",
+            "path": "/usr/lib/jvm/java-11-openjdk",
+            "sources": "/usr/lib/jvm/jre-11/lib/src.zip",
+            "javadoc": "https://docs.oracle.com/en/java/javase/11/docs/api/",
+            "default": true
+        }
+    ]
+}

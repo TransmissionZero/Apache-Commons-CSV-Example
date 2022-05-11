@@ -1,0 +1,12 @@
+{
+	"name": "Apache Commons CSV Example",
+	"build": {
+		"dockerfile": "../Dockerfile",
+		"context": ".."
+	},
+	"extensions": [
+		"vscjava.vscode-java-pack",
+		"redhat.vscode-xml",
+		"redhat.fabric8-analytics"
+	]
+}
